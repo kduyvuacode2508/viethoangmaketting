@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng ký khóa học</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #014177;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      width: 320px;
+      text-align: center;
+    }
+    h2 {
+      color: red;
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      color: #014177;
+      margin-bottom: 1rem;
+    }
+    .price-box {
+      margin: 1rem 0;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #999;
+    }
+    .new-price {
+      font-size: 1.5rem;
+      color: #007bff;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 0.6rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 0.7rem;
+      background-color: red;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: darkred;
+    }
+    .message {
+      margin-top: 1rem;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>ĐĂNG KÝ</h2>
+    <h3>Khóa Học Online</h3>
+    <div class="price-box">
+      <div class="old-price">6.990.000 VNĐ</div>
+      <div class="new-price">5.490.000 VNĐ</div>
+    </div>
+    <form id="signupForm">
+      <input type="text" id="fullname" placeholder="Họ và tên" required />
+      <input type="email" id="email" placeholder="Gmail" required />
+      <input type="text" id="zalo" placeholder="Số Zalo Liên Hệ" required />
+      <button type="submit">Đăng Ký Ngay</button>
+    </form>
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById("signupForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const fullname = document.getElementById("fullname").value;
+      const email = document.getElementById("email").value;
+      const zalo = document.getElementById("zalo").value;
+
+      const user = { fullname, email, zalo };
+      localStorage.setItem("user_signup", JSON.stringify(user));
+
+      message.textContent = "Đăng ký thành công!";
+      form.reset();
+    });
+  </script>
+</body>
+</html>
