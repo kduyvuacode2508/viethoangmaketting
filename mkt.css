@@ -2,6 +2,10 @@ body{
   background-color: #4c688f;
   width: 100% ;
 }
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 /* Khung dài như header */
 .header {
   position: relative;
@@ -87,7 +91,7 @@ body{
 #index3 {
   margin-left: 1300px;
   /* Nhích sang phải 50px */
-  margin-top: -20px;
+  margin-top: 0px;
   border: 2px solid red;
   /* tạo viền */
   padding: 10px 20px;
@@ -1175,4 +1179,126 @@ font-size: 25px;                /* kích thước chữ */
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
   transition: transform 0.3s;
   animation: blink-glow 2s infinite; /* 👈 hiệu ứng nhấp nháy */
+}
+
+/* Responsive cho chữ chạy ngang */
+@media screen and (max-width: 768px) {
+  .index-wrapper {
+    height: 36px;
+  }
+
+  #index {
+    font-size: 13px;
+    letter-spacing: 2px;
+    padding: 8px 0;
+  }
+
+  /* Ẩn các phần dùng margin cố định gây tràn */
+  #index2, #index3 {
+    display: none;
+  }
+
+  /* Ảnh marketing không bị tràn */
+  #anhmarketing,
+  #viethoangmarketing {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+  }
+
+  /* Điều chỉnh khung ảnh và box layout */
+  .box,
+  .slogan_container,
+  .gallery-grid {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .cot {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .khung {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  /* Danh sách dịch vụ */
+  #viethoang1 {
+    width: 90% !important;
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  /* Điều chỉnh khoảng cách, kích cỡ text */
+  .small-text,
+  .tieu-de-viet-hoang {
+    font-size: 18px;
+    padding: 12px;
+    line-height: 1.5;
+  }
+
+  .info-box,
+  .service-box,
+  .class,
+  .hoc-info,
+  .press-about,
+  .social-support,
+  .camket-section,
+  .press-reviews,
+  .thong-bao,
+  .intro-container,
+  .contact-info {
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 95%;
+  }
+
+  .personal-info h3 {
+    font-size: 24px;
+  }
+
+  .social-icons a img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Nút gọi / chat / messenger thu nhỏ trên mobile */
+  .call-button,
+  .messenger-button,
+  .zalo-button,
+  .fanpage-button,
+  #chat-toggle,
+  #chat-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .call-button img,
+  .messenger-button img,
+  .zalo-button img,
+  .fanpage-button img {
+    width: 24px;
+    height: 24px;
+  }
+
+  #chat-toggle {
+    font-size: 24px;
+    line-height: 50px;
+  }
+
+  #chat-box {
+    width: 280px;
+  }
+
+  .review-box {
+    font-size: 15px;
+  }
 }
