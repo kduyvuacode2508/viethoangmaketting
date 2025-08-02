@@ -1219,9 +1219,9 @@ font-size: 25px;                /* kích thước chữ */
 
   /* Danh sách dịch vụ */
   #viethoang1 {
-    width: 90% !important;
+  
     font-size: 15px;
-    padding: 15px;
+   
   }
 
   /* Điều chỉnh khoảng cách, kích cỡ text */
@@ -1309,13 +1309,7 @@ font-size: 25px;                /* kích thước chữ */
     padding: 8px 10px;
   }
 
-  .box,
-  .slogan_container,
-  .gallery-grid {
-    flex-direction: column !important;
-    align-items: center;
-    gap: 20px;
-  }
+ 
 
   .cot, .column {
     width: 100% !important;
