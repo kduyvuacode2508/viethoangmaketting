@@ -201,11 +201,8 @@ html, body {
   /* Bo tròn góc khung */
   background-color: #f0f8ff;
   /* Nền nhẹ */
-  margin: 10px;
-  line-height: 22px;
-  /* Cách dòng cho dễ đọc */
-  box-sizing: border-box;
-  list-style-type: disc;
+ 
+  
   /* Dấu chấm */
   font-size: 16px;
 
@@ -238,11 +235,11 @@ html, body {
 }
 
 .slogan_container #viethoang1 {
-  width: calc(50% - 40px);
+ 
 }
 
 .slogan_container #viethoang1:nth-child(3) {
-  margin: 0 100px;
+  
 }
 
 
@@ -1302,3 +1299,73 @@ font-size: 25px;                /* kích thước chữ */
     font-size: 15px;
   }
 }
+
+
+/* Ẩn các phần quá to trên mobile */
+@media screen and (max-width: 768px) {
+  #index2,
+  #index3,
+  #anhmarketing {
+    display: none !important;
+  }
+
+  #index {
+    font-size: 13px;
+    letter-spacing: 2px;
+    padding: 8px 10px;
+  }
+
+  .box,
+  .slogan_container,
+  .gallery-grid {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .cot, .column {
+    width: 100% !important;
+    padding: 0 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .info-box,
+  .service-box,
+  .hoc-info,
+  .class,
+  .press-about,
+  .intro-container,
+  .thong-bao {
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 95%;
+  }
+  .call-button,
+  .messenger-button,
+  .zalo-button,
+  .fanpage-button,
+  #chat-toggle {
+    right: 10px !important; /* co vào gần mép phải */
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .call-button img,
+  .messenger-button img,
+  .zalo-button img,
+  .fanpage-button img {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  #chat-toggle {
+    font-size: 24px !important;
+    line-height: 50px !important;
+  }
+
+}
+
